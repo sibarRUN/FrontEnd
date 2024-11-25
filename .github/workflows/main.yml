@@ -14,7 +14,7 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v3
 
-      # 2. AWS CLI 설치
+      # 2. AWS CLI 설정
       - name: Configure AWS CLI
         uses: aws-actions/configure-aws-credentials@v3
         with:
@@ -22,7 +22,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      # 3. S3 버킷의 특정 폴더에 파일 업로드
+      # 3. S3 버킷에 파일 업로드
       - name: Deploy to S3
         run: |
-          aws s3 sync . s3://testweb624/testsd --delete --acl public-read
+          aws s3 sync . s3://testweb624/testsd --delete
