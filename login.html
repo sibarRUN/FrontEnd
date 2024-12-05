@@ -77,9 +77,8 @@
       }
 
       // 로그인 성공 시 메시지 표시 후 메인 페이지로 이동
-      //되고 있는건가?
       alert('로그인 성공!');
-      window.location.href = 'http://bon-genie-front.s3-website.ap-northeast-2.amazonaws.com';
+      window.location.href = 'https://g0es0utxc7.execute-api.ap-northeast-2.amazonaws.com/dev/register';
       return true;
     }
   </script>
@@ -91,7 +90,6 @@
       <input type="text" id="id" placeholder="아이디" required>
       <input type="password" id="password" placeholder="비밀번호" required>
       <button type="submit" class="btn">Login</button>
-      <a href="javascript:history.back()" class="btn">Back</a>
     </form>
   </div>
 </body>
